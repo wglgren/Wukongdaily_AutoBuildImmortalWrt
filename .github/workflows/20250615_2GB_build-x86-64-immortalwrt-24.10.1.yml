@@ -1,4 +1,4 @@
-name: 20250615__2GB_build-x86-64-immortalwrt-24.10.1
+name: 20250615_2GB_build-x86-64-immortalwrt-24.10.1
 
 on:
   workflow_dispatch:
