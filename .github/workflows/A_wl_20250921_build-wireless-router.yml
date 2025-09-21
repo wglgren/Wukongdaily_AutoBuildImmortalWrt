@@ -15,7 +15,7 @@
 # xiaomi_redmi-router-ax6000-stock ————原厂默认 bootloader（stock）版本
 # xiaomi_redmi-router-ax6000-ubootmod—————改装过 bootloader 的版本（ubootmod）
 
-name: A_wl_20250921_build-wireless-router Build Wireless Router ImmortalWrt 24.10.x
+name: A_wl_20250921_build-wireless-router
 
 on:
   workflow_dispatch:
@@ -558,7 +558,7 @@ jobs:
           fi
 
 
-      - name: Build Wireless ImmortalWrt 24.10.2
+      - name: A_wl_20250921_build-wireless-router Build Wireless ImmortalWrt 24.10.2
         run: |
           profile="${{ github.event.inputs.profile }}"
           echo "Building for profile: $profile"
@@ -670,8 +670,8 @@ jobs:
       - name: Upload ImmortalWrt as release assets
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: ${{ github.event.inputs.profile }}
-          name: A_wl_20250921_build-wireless-router
+          tag_name: A_wl_20250921_build-wireless-router ${{ github.event.inputs.profile }}
+          name: ImmortalWrt-Wireless
           body_path: ${{ github.workspace }}/mediatek-filogic/info.md
           files: |
             ${{ github.workspace }}/bin/targets/${{ env.platform }}/*
