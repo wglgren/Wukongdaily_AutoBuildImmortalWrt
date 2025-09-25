@@ -3,7 +3,7 @@
 # 安装时 若是多张硬盘 你可以选择 需要安装的硬盘 此类方法安装的openwrt 安装后是有剩余空间的 更多信息请参考 wukongdaily/img-installer 项目
 # 几乎所有linux 都有各自的安装器 唯独openwrt和armbian 没有, 希望此工作流 弥补这个遗憾 让你更优雅的 安装openwrt 
 
-name: A_wl_20250926_4GB_build-iso
+name: A_wl_20250926_2GB_build-iso
 
 on:
   workflow_dispatch:
@@ -132,7 +132,7 @@ jobs:
       - name: 🚀 上传 ISO 到 Release
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: "A_wl_20250926_4GB_build-iso"
+          tag_name: "A_wl_20250926_2GB_build-iso"
           body_path: "${{ github.workspace }}/img-installer/autobuild/info.md"
           files: |
             img-installer/output/custom-installer-x86_64.iso
