@@ -135,5 +135,5 @@ jobs:
           tag_name: "A_wl_20250926_4GB_build-iso"
           body_path: "${{ github.workspace }}/img-installer/autobuild/info.md"
           files: |
-            img-installer/output/A_wl_20250926_4GB_build-iso_custom-installer-x86_64.iso
+            img-installer/output/custom-installer-x86_64.iso
           token: "${{ secrets.GITHUB_TOKEN }}"
