@@ -1,4 +1,4 @@
-name: A_wl_20251115_2GB_build-x86-64-24.10.x
+name: A_wl_20251115_2GB_build-x86-64-24.10.x-ed02
 
 on:
   workflow_dispatch:
@@ -21,7 +21,7 @@ on:
       profile:
         description: '请输入要编译固件大小 单位(MB)'
         required: true
-        default: '1024'
+        default: '2048'
       enable_store:
         description: "集成 store 商店"
         required: false
@@ -31,7 +31,7 @@ on:
         description: |
           是否编译 Docker 插件
         required: true
-        default: 'yes'
+        default: 'no'
         type: choice
         options:
           - 'yes'
@@ -129,7 +129,7 @@ jobs:
       - name: Upload ImmortWrt as release assets
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: A_wl_20251115_2GB_build-x86-64-24.10.x
+          tag_name: A_wl_20251115_2GB_build-x86-64-24.10.x-ed02
           body_path: ${{ github.workspace }}/router-info.md
           files: |
             ${{ github.workspace }}/bin/targets/x86/64/*squashfs-combined-efi.img.gz
