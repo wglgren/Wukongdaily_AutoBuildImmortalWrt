@@ -1,4 +1,4 @@
-name: build-x86-64-immortalwrt-24.10.x
+name: A_wl_20260109_2GB_build-x86-64-24.10.x
 
 on:
   workflow_dispatch:
