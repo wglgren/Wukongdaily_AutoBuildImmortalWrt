@@ -1,4 +1,4 @@
-name: build-x86-64-immortalwrt-25.12.x
+name: A_wl_20260418_2GB_build-x86-64-25.12.x
 on:
   workflow_dispatch:
     inputs:
@@ -17,7 +17,7 @@ on:
       profile:
         description: '请输入要编译固件大小 单位(MB)'
         required: true
-        default: '1024'
+        default: '2048'
       include_docker:
         description: |
           是否编译 Docker 插件
@@ -114,7 +114,7 @@ jobs:
       - name: Upload ImmortWrt as release assets
         uses: softprops/action-gh-release@v2.2.1
         with:
-          tag_name: Autobuild-x86-64
+          tag_name: A_wl_20260418_2GB_build-x86-64-25.12.x
           body_path: ${{ github.workspace }}/router-info.md
           files: |
             ${{ github.workspace }}/bin/targets/x86/64/*squashfs-combined-efi.img.gz
